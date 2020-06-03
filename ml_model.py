@@ -70,8 +70,8 @@ df = onehot_encode(df, cat)
 
 df = remove_outliers(df, num)
 
-train = df[0:890]
-test = df[891::]
+train = df[0:870]
+test = df[871::]
 X_train = train.drop(target, axis = 1)
 X_test = test.drop(target, axis = 1)
 y_train = train[target]
@@ -81,7 +81,7 @@ y_train = train[target]
 model = RandomForestClassifier()
 model.fit(X_train,y_train)
 
-model.predict(X_test)
+y_pred = model.predict(X_test)
 
 #NEW FUNCTION
 
