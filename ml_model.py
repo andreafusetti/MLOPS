@@ -82,3 +82,8 @@ model = RandomForestClassifier()
 model.fit(X_train,y_train)
 
 model.predict(X_test)
+
+#NEW FUNCTION
+
+def score(y_pred, y_test):
+    return accuracy_score(self.y_test, y_pred)
